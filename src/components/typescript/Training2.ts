@@ -88,3 +88,7 @@ export function getKeys4<T extends object>(obj: T): (keyof T)[]{
 export function findMax2<T>(values: T[], compare: (a: T, b: T) => number): T | undefined{
     return values.reduce((max, min) => compare(max, min) > 0 ? max : min)
 }
+
+export function firstOfAnyArray<T>(arr: T[]): T{
+    return arr[0]
+}

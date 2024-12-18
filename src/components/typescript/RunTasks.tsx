@@ -16,7 +16,8 @@ import {
     reverseArray,
     getKeys,
     wrapAValue,
-    findMax
+    findMax,
+    firstOfAnyArray
 } from './Training2'
 
 
@@ -53,7 +54,8 @@ const RunTasks = () => {
         // console.log(reverseArray(array2))
         // console.log(getKeys(obj))
         // console.log(wrapAValue(283923))
-        console.log(findMax(array1, (a, b) => a.length - b.length))
+        // console.log(findMax(array1, (a, b) => a.length - b.length))
+        // console.log(firstOfAnyArray(array2))
     }, [])
   return (
     <div>RunTasks</div>
