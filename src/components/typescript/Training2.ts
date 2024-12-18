@@ -84,3 +84,7 @@ export function getKeys3<T extends object>(obj: T): (keyof T)[]{
 export function getKeys4<T extends object>(obj: T): (keyof T)[]{
     return Object.keys(obj) as (keyof T)[]
 }
+
+export function findMax2<T>(values: T[], compare: (a: T, b: T) => number): T | undefined{
+    return values.reduce((max, min) => compare(max, min) > 0 ? max : min)
+}
