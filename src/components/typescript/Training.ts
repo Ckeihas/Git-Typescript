@@ -84,3 +84,72 @@ function div(x:number, y:number): number{
 
 // mixedTypes([1, 'moi', 2, 4, 5, 'tere'])
 
+
+export function validRange2(tupleValue: [number, number]): boolean{
+    return tupleValue[0] > tupleValue[1]
+}
+
+export function flatValues(value: number[][]): number[]{
+    return value.flat()
+}
+
+export function filterTuples2(arr: [string, number][], treshold: number): [string, number][]{
+    return arr.filter(([_, value]) => value < treshold)
+}
+
+export function returnTuples(arr: number[], ): [number, number]{
+    let max = arr[0];
+    
+    let index = 0;
+    arr.forEach((num, i) => {
+        console.log("Max: ", max)
+        if(num > max){
+            max = num
+            index = i;
+        }
+    })
+
+    return [max, index]
+}
+
+
+export function returnTuples2(arr: number[], ): [number, number]{
+    let maxValue = arr[0];
+    let index = 0;
+    arr.forEach((numero, i) => {
+
+        if(numero > maxValue){
+            maxValue = numero;
+            index = i;
+        }
+    })
+
+    return [maxValue, index]
+}
+
+export function findMax3(arr: number[]): [number, number]{
+    
+    let max = arr[0];
+    let index = 0;
+    arr.forEach((item, i) => {
+        if(item > max){
+            max = item
+        }
+        index = i
+    });
+
+    return [max, index]
+}
+
+export function groupTuples(arr: string[]): [string[], string[]]{
+    let arrayStrings: [higher: string[], lower: string[]] = [[],[]]
+    arr.forEach((item, index) => {
+        if(item.length > 5){
+            arrayStrings[0].push(item)
+        } else{
+            arrayStrings[1].push(item)
+        }
+    })
+
+    return arrayStrings
+}

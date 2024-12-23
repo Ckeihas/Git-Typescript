@@ -8,7 +8,8 @@ import {
     validRange,
     flattenArray,
     filterTuples,
-    
+    returnTuples,
+    groupTuples
 } from './Training'
 import { 
     calculateFinalPrice,
@@ -17,8 +18,12 @@ import {
     getKeys,
     wrapAValue,
     findMax,
-    firstOfAnyArray
+    firstOfAnyArray,
+    
 } from './Training2'
+
+import FormValidation from '../FormValidation';
+import FixBugs from '../react/FixBugs';
 
 
 const users = [
@@ -40,7 +45,7 @@ const product = {
 const obj = {id: 1, username: 'kekkuli', email: 'klkasjl@jsdk.com', password: 'sdljdk'}
 
 const array1 = ["moi", 'ljkkds', 'djlsdkj', 'dkjsdljk']
-const array2 = [1, 2, 3, 4, 5, 6, 7, 8]
+const array2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 const RunTasks = () => {
 
     useEffect(() => {
@@ -56,9 +61,13 @@ const RunTasks = () => {
         // console.log(wrapAValue(283923))
         // console.log(findMax(array1, (a, b) => a.length - b.length))
         // console.log(firstOfAnyArray(array2))
+        // console.log(returnTuples(array2))
+        // console.log(groupTuples(array1))
     }, [])
   return (
-    <div>RunTasks</div>
+    <div>
+        <FixBugs />
+    </div>
   )
 }
 
