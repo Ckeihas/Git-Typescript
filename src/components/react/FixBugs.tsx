@@ -100,10 +100,37 @@ const HighlightSelectedItem2 = () => {
 }
 
 
+
+
+
+const HighlightSelectedItem3 = () => {
+    const [selectedItem, setSelectedItem] = useState<Record<number, boolean>>({});
+
+    const handleClick = (index: number) => {
+        setSelectedItem((prev) => ({
+            ...prev,
+            [index]: !prev[index]
+        }))
+    }
+    return(
+        <div>
+            {
+                items.map((item, index) => (
+                    <button 
+                    style={selectedItem[index] ? { color: 'green' } : {color: 'red'}}
+                    key={index} 
+                    onClick={() => handleClick(index)}>{item}</button>
+                ))
+            }
+        </div>
+    )
+}
+
+
 const FixBugs = () => {
   return (
     <div style={{marginTop: 100}}>
-        <HighlightSelectedItem2 />
+        <HighlightSelectedItem3 />
     </div>
   )
 }
