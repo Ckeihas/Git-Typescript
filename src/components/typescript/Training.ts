@@ -153,3 +153,14 @@ export function groupTuples(arr: string[]): [string[], string[]]{
 
     return arrayStrings
 }
+
+// Task: Write a generic function filterByProperty<T> 
+// that takes an array of objects of type T, a property key of type keyof T, and a value. 
+// The function should return all objects where the property matches the specified value.
+
+export function filterByProperty<T, V>(obj: T[], key: keyof T, value: V): T[]{
+    return obj.filter((item) => item[key] === value)
+}
+
+
+  

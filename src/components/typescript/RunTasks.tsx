@@ -24,6 +24,7 @@ import {
 
 import FormValidation from '../FormValidation';
 import FixBugs from '../react/FixBugs';
+import FetchTheCountries from '../react/FetchTheCountries';
 
 
 const users = [
@@ -55,7 +56,7 @@ const RunTasks = () => {
         // console.log(filterTuples([['jashk', 232], ['221', 2050], ['kljljad', 180], ['askld', 3.5], ['llll', 1.99]], 20))
         // console.log(destructProducts([['Omena', 232], ['päärynä', 2050], ['jotain', 180], ['TV', 3.5], ['Pleikka', 1.99]]))
         // console.log(calculateFinalPrice(product, 24))
-        // console.log(filterByProperty(users, "age", 30));
+        console.log(filterByProperty(users, "id", 3));
         // console.log(reverseArray(array2))
         // console.log(getKeys(obj))
         // console.log(wrapAValue(283923))
@@ -66,7 +67,7 @@ const RunTasks = () => {
     }, [])
   return (
     <div>
-        <FixBugs />
+        <FetchTheCountries />
     </div>
   )
 }

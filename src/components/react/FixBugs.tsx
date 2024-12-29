@@ -106,6 +106,7 @@ const HighlightSelectedItem2 = () => {
 const HighlightSelectedItem3 = () => {
     const [selectedItem, setSelectedItem] = useState<Record<number, boolean>>({});
 
+    console.log(selectedItem)
     const handleClick = (index: number) => {
         setSelectedItem((prev) => ({
             ...prev,
