@@ -65,3 +65,7 @@ export function TransformArray(arr: Iitems[]): Map<string, Iitems>{
     const mapObj = new Map(mapArrayItems)
     return mapObj
 }
+
+export const jokufunctio = () => {
+    console.log('jeejee')
+}
