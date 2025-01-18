@@ -65,3 +65,14 @@ export function TransformArray(arr: Iitems[]): Map<string, Iitems>{
     const mapObj = new Map(mapArrayItems)
     return mapObj
 }
+
+export function GroupItems2<T extends Record<string, any>>(arr: T[], key: keyof T): Record<string, T[]>{
+    return arr.reduce((prev, current) => {
+        const categoryKey = current[key]
+
+        prev[categoryKey] = prev[categoryKey] || [];
+        prev[categoryKey].push(current)
+
+        return prev;
+    }, {} as Record<string, T[]>)
+}
