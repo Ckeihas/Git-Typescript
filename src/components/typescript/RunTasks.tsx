@@ -22,9 +22,18 @@ import {
     
 } from './Training2'
 
+import { 
+    filteryPropertyToObj,
+    JustReduce,
+    TransformArray,
+    GroupItems
+} from './Training3';
+
 import FormValidation from '../FormValidation';
 import FixBugs from '../react/FixBugs';
 import FetchTheCountries from '../react/FetchTheCountries';
+import WeatherPage from '../react/WeatherPage';
+import FetchingCountries from '../react/FetchingCountries';
 
 
 const users = [
@@ -47,6 +56,16 @@ const obj = {id: 1, username: 'kekkuli', email: 'klkasjl@jsdk.com', password: 's
 
 const array1 = ["moi", 'ljkkds', 'djlsdkj', 'dkjsdljk']
 const array2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+const items = [
+    {id: '134', category: 'fruit', name: 'apple'},
+    {id: '293489', category: 'vegetable', name: 'banaani'},
+    {id: '31278', category: 'vegetable', name: 'mango'},
+    {id: '4178', category: 'fruit', name: 'porkkana'},
+    {id: '512', category: 'vegetable', name: 'vesimelooni'},
+    {id: '62378', category: 'fruit', name: 'kiivi'},
+    {id: '71', category: 'vegetable', name: 'jotain'},
+]
 const RunTasks = () => {
 
     useEffect(() => {
@@ -56,7 +75,7 @@ const RunTasks = () => {
         // console.log(filterTuples([['jashk', 232], ['221', 2050], ['kljljad', 180], ['askld', 3.5], ['llll', 1.99]], 20))
         // console.log(destructProducts([['Omena', 232], ['päärynä', 2050], ['jotain', 180], ['TV', 3.5], ['Pleikka', 1.99]]))
         // console.log(calculateFinalPrice(product, 24))
-        console.log(filterByProperty(users, "id", 3));
+        // console.log(filteryPropertyToObj(users, 'age', 30));
         // console.log(reverseArray(array2))
         // console.log(getKeys(obj))
         // console.log(wrapAValue(283923))
@@ -64,10 +83,13 @@ const RunTasks = () => {
         // console.log(firstOfAnyArray(array2))
         // console.log(returnTuples(array2))
         // console.log(groupTuples(array1))
+        console.log("Just reduce: ", JustReduce(items))
+        console.log("Group items with reduce and record: ", GroupItems(items, 'category'))
+        console.log("Using Map: ", TransformArray(items))
     }, [])
   return (
     <div>
-        <FetchTheCountries />
+        <FixBugs />
     </div>
   )
 }
